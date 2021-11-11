@@ -13,8 +13,8 @@ class GitHubRestClientTest {
     @Test
     void testGetIssues() throws IOException {
         GitHubRestClient client = new GitHubRestClient();
-        String token = System.getProperty("bearer.token");
-        String actualJson = client.getIssues(token);
+        String bearerToken = System.getProperty("bearer.token");
+        String actualJson = client.getIssues(bearerToken);
         String expectedJson = Files.readString(
                 Paths.get("src/test/resources/sample-output.txt"));
         
