@@ -116,6 +116,12 @@ public class Issue implements Comparable<Issue>{
         // TODO Auto-generated method stub
         //based on id 
         //comparing this and other by id 
+        if( this.id > other.id) {
+            return 1;
+        }
+        else if(this.id < other.id) {
+            return -1;
+        }
         return 0;
     }
     

@@ -1,6 +1,6 @@
 package edu.studio.issue;
 
-public class User {
+public class User implements Comparable<User>{
     
     private String login; //the user’s GitHub username
     private long id; //the user’s GitHub internal id
@@ -43,6 +43,20 @@ public class User {
 
     public void setId(long id) {
         this.id = id;
+    }
+    
+    @Override
+    public int compareTo(User other) {
+        // TODO Auto-generated method stub
+        //based on id 
+        //comparing this and other by id 
+        if( this.id > other.id) {
+            return 1;
+        }
+        else if(this.id < other.id) {
+            return -1;
+        }
+        return 0;
     }
     
 }
