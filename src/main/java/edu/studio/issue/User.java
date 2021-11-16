@@ -16,6 +16,11 @@ public class User implements Comparable<User>{
     }
 
     @Override
+    public String toString() {
+        return "(login=" + login + ", id=" + id + ")";
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (this == obj)
             return true;

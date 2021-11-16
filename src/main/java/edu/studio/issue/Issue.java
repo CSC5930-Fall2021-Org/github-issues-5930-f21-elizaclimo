@@ -24,6 +24,13 @@ public class Issue implements Comparable<Issue>{
     }
 
     @Override
+    public String toString() {
+        return "Issue [number=" + number + ", id=" + id + ", state=" + state + ", title=" + title + ", body=" + body
+                + ", createdAt=" + createdAt + ", closedAt=" + closedAt + ", user=" + user.toString() + ", assignee=" + assignee.toString()
+                + "]";
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
