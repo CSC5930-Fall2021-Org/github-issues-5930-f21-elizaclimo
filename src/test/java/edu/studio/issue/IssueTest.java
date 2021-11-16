@@ -49,7 +49,7 @@ class IssueTest {
         issueA.setId(1000);
         
         assertEquals(issueA, issueB);
-        assertEquals(issueA.compareTo(issueB) > 0);
+        assertEquals(issueA.compareTo(issueB), 0);
         
     }
     
