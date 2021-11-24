@@ -25,9 +25,7 @@ public class Issue implements Comparable<Issue>{
 
     @Override
     public String toString() {
-        return "Issue [number=" + number + ", id=" + id + ", state=" + state + ", title=" + title + ", body=" + body
-                + ", createdAt=" + createdAt + ", closedAt=" + closedAt + ", user=" + user.toString() + ", assignee=" + assignee.toString()
-                + "]";
+        return "Issue [number=" + number + ", id=" + id + ", state=" + state + ", title=" + title + ", " + "body=" + body + ", createdAt=" + createdAt + ", closedAt=" + closedAt + ", user=" + user + ", assignee=" + assignee + "]";
     }
 
     @Override
@@ -39,9 +37,7 @@ public class Issue implements Comparable<Issue>{
         if (getClass() != obj.getClass())
             return false;
         Issue other = (Issue) obj;
-        if (id != other.id)
-            return false;
-        return true;
+        return id == other.id;
     }
 
     public int getNumber() {
@@ -120,7 +116,6 @@ public class Issue implements Comparable<Issue>{
 
     @Override
     public int compareTo(Issue other) {
-        // TODO Auto-generated method stub
         //based on id 
         //comparing this and other by id 
         if( this.id > other.id) {
